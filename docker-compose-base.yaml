@@ -1,0 +1,7 @@
+version: "3"
+services:
+  ringo:
+    image: dalongrong/ringojs:1.2.1
+    build:
+      context: .
+      dockerfile: Dockerfile-base
