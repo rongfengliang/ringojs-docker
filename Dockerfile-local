@@ -1,0 +1,9 @@
+FROM java:8
+MAINTAINER  1141591465@qq.com
+ENV RINGO_HOME=/ringojs/ringojs-1.2.1
+ENV PATH=$PATH:$RINGO_HOME/bin
+RUN mkdir -p /ringojs
+ADD ringojs-1.2.1.zip /ringojs/
+RUN apt-get update && apt-get install -y unzip && \
+    cd /ringojs && unzip ringojs-1.2.1.zip  &&  rm -rf  ringojs-1.2.1.zip && \
+    ringojs-1.2.1/bin/ringo-admin install grob/rps

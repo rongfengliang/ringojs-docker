@@ -1,0 +1,7 @@
+version: "3"
+services:
+  ringo:
+    image: dalongrong/ringojs-docker:local
+    build:
+      context: .
+      dockerfile: Dockerfile-local
